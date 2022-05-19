@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Budgtr</h1>
+        <button><a href="http://localhost:3000/budget/new">New Item</a></button>
+        <table>
+            <% for(let i = 0; i < budget.length; i++){ %>
+                <tr>
+                    <td><%= budget[i].date %></td>
+                    <td><a href="http://localhost:3000/budget/<%= i %>"><%= budget[i].name %></a></td>
+                    <td><%= budget[i].amount %></td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+</body>
+</html>
